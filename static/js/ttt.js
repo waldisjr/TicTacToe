@@ -35,13 +35,12 @@ function makeMove(field){
 
 
 function isDraw(){
-    console.log('isDraw')
     let tags = document.getElementsByClassName("field");
     let flash = document.getElementById('flash');
     let i;
     let flag = true;
     for (i in tags){
-        console.log(tags[i])
+        console.log(tags[i].textContent)
         if (tags[i].textContent === ''){
             flag = false
         }
@@ -63,11 +62,11 @@ function isWin(){
     }
     if (tags[3].textContent === tags[4].textContent && tags[4].textContent === tags[5].textContent
         && tags[3].textContent !== ''){
-        flash.textContent = `${tags[0].textContent} has won`
+        flash.textContent = `${tags[3].textContent} has won`
     }
     if (tags[6].textContent === tags[7].textContent && tags[7].textContent === tags[8].textContent
         && tags[6].textContent !== ''){
-        flash.textContent = `${tags[0].textContent} has won`
+        flash.textContent = `${tags[6].textContent} has won`
     }
     if (tags[0].textContent === tags[3].textContent && tags[3].textContent === tags[6].textContent
         && tags[0].textContent !== ''){
@@ -87,6 +86,6 @@ function isWin(){
     }
     if (tags[2].textContent === tags[4].textContent && tags[4].textContent === tags[6].textContent
         && tags[2].textContent !== ''){
-        flash.textContent = `${tags[0].textContent} has won`
+        flash.textContent = `${tags[2].textContent} has won`
     }
 }
