@@ -5,6 +5,7 @@ function clearField(){
     for(i in tags){
         tags[i].textContent = "";
     }
+    return false
 }
 
 

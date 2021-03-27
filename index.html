@@ -33,26 +33,26 @@
             color: black;
         }
     </style>
-    <script src="../static/js/ttt.js"></script>
+    <script src="static/js/ttt.js"></script>
 </head>
 <body>
     <table>
         <tr>
-            <td class="field" onclick="makeMove(this)">X</td>
             <td class="field" onclick="makeMove(this)"></td>
-            <td class="field" onclick="makeMove(this)"></td>
-        </tr>
-        <tr>
-            <td class="field" onclick="makeMove(this)">O</td>
             <td class="field" onclick="makeMove(this)"></td>
             <td class="field" onclick="makeMove(this)"></td>
         </tr>
         <tr>
-            <td class="field" onclick="makeMove(this)">O</td>
-            <td class="field" onclick="makeMove(this)">X</td>
+            <td class="field" onclick="makeMove(this)"></td>
+            <td class="field" onclick="makeMove(this)"></td>
+            <td class="field" onclick="makeMove(this)"></td>
+        </tr>
+        <tr>
+            <td class="field" onclick="makeMove(this)"></td>
+            <td class="field" onclick="makeMove(this)"></td>
             <td class="field" onclick="makeMove(this)"></td>
         </tr>
     </table>
-    <a href="#" onclick="">RESTART</a>
+    <a href="#" onclick="clearField(this)">RESTART</a>
 </body>
 </html>
