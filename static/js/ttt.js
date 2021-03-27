@@ -40,7 +40,6 @@ function isDraw(){
     let i;
     let flag = true;
     for (i in tags){
-        console.log(tags[i].textContent)
         if (tags[i].textContent === ''){
             flag = false
         }
