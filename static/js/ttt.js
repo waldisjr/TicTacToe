@@ -1,10 +1,12 @@
 let moveType = "X";
+let used = 0;
 
 function clearField(){
     let tags = document.getElementsByClassName("field");
     let flash = document.getElementById("flash")
     let i;
     flash.textContent = ''
+    used = 0
     for(i in tags){
         tags[i].textContent = "";
     }
@@ -20,12 +22,15 @@ function makeMove(field){
     else if(field.textContent === ''){
         field.textContent = moveType;
         isWin()
-        isDraw()
         if(moveType === 'X'){
             moveType = 'O';
         }
         else{
             moveType = 'X';
+        }
+        used += 1
+        if (used === 9){
+            flash.textContent = 'Draw !'
         }
     }
     else{
@@ -34,20 +39,20 @@ function makeMove(field){
 }
 
 
-function isDraw(){
-    let tags = document.getElementsByClassName("field");
-    let flash = document.getElementById('flash');
-    let i;
-    let flag = true;
-    for (i in tags){
-        if (tags[i].textContent === ''){
-            flag = false
-        }
-    }
-    if (flag === true && flash.textContent === ''){
-        flash.textContent = 'Draw !'
-    }
-}
+// function isDraw(){
+//     let tags = document.getElementsByClassName("field");
+//     let flash = document.getElementById('flash');
+//     let i;
+//     let flag = true;
+//     for (i in tags){
+//         if (tags[i].textContent === ''){
+//             flag = false
+//         }
+//     }
+//     if (flag === true && flash.textContent === ''){
+//         flash.textContent = 'Draw !'
+//     }
+// }
 
 
 
