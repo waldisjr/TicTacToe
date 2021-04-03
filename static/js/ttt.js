@@ -36,24 +36,8 @@ function makeMove(field){
     else{
         alert('Hey! This field is already filled!')
     }
+    return false
 }
-
-
-// function isDraw(){
-//     let tags = document.getElementsByClassName("field");
-//     let flash = document.getElementById('flash');
-//     let i;
-//     let flag = true;
-//     for (i in tags){
-//         if (tags[i].textContent === ''){
-//             flag = false
-//         }
-//     }
-//     if (flag === true && flash.textContent === ''){
-//         flash.textContent = 'Draw !'
-//     }
-// }
-
 
 
 function isWin(){
@@ -92,4 +76,5 @@ function isWin(){
         && tags[2].textContent !== ''){
         flash.textContent = `${tags[2].textContent} has won`
     }
+    return false
 }
